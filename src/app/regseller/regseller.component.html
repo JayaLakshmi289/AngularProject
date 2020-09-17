@@ -1,0 +1,266 @@
+
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        </head>
+        
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <!-- Standard Meta -->
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        
+            <!-- Site Properties -->
+            <title>Registration</title>
+        
+            <!-- Stylesheets -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+        </head>
+        <body>
+        <div class="container">
+            <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)"> 
+        
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <h2> New Seller Registration</h2>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="sellerName" [(ngModel)]='sellerdetails.sellerName'class="form-control" id="name"
+                                       placeholder="John Doe" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="email">E-Mail Address</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                <input type="text"name="sellerEmail" [(ngModel)]='sellerdetails.sellerEmail' class="form-control" id="email"
+                                       placeholder="you@example.com" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put e-mail validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="email">Mobile No</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-phone"></i></div>
+                                <input type="number" name="mobileNo" [(ngModel)]='sellerdetails.mobileNo' class="form-control" id="email"
+                                       placeholder="947646453" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put e-mail validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="street">Street</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="street" [(ngModel)]='sellerdetails.address.street'class="form-control" id="street"
+                                       placeholder="street" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="city" [(ngModel)]='sellerdetails.address.city'class="form-control" id="city"
+                                       placeholder="city" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="state">State</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="state" [(ngModel)]='sellerdetails.address.state'class="form-control" id="state"
+                                       placeholder="state" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="country">Country</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="country" [(ngModel)]='sellerdetails.address.country'class="form-control" id="country"
+                                       placeholder="country" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="pincode">Pincode</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text"name="pincode" [(ngModel)]='sellerdetails.address.pincode'class="form-control" id="pincode"
+                                       placeholder="pincode" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put name validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="password">Username</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group has-danger">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                <input type="text" name="userName" [(ngModel)]='sellerdetails.userName' class="form-control" id="password"
+                                       placeholder="userName" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-control-feedback">
+                                <span class="text-danger align-middle">
+                                    <!-- Put e-mail validation error messages here -->
+                                </span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="password">Password</label>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group has-danger">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                <input type="password" name="password" [(ngModel)]='sellerdetails.password' class="form-control" id="password"
+                                       placeholder="Password" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-3 field-label-responsive">
+                        <label for="password">Confirm Password</label>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                <div class="input-group-addon" style="width: 2.6rem">
+                                    <i class="fa fa-repeat"></i>
+                                </div>
+                                <input type="password" name="password-confirmation" class="form-control"
+                                       id="password-confirm" placeholder="Password" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-success" (click)="showToasterSuccess()"><i class="fa fa-user-plus"></i> Register</button>
+                    </div>
+                </div>
+                <h4>Already have an account?<a [routerLink]="['/sellerlogin']">Login here</a></h4>   
+            </form>
+        </div>
+        </body>

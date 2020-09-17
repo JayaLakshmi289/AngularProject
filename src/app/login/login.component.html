@@ -1,0 +1,64 @@
+<!--
+    <head>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    </head>
+   
+    <div class="container">
+        <form #loginForm="ngForm" class="form-group" (ngSubmit)="validateUser(loginForm.value)" novalidate>
+            
+            <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" class="form-control" name="userName" ngModel required  #userName="ngModel" placeholder="login id"><br />
+            </div>
+    
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>    
+            <input type="password" class="form-control" name="password" ngModel required #password="ngModel" placeholder="password"><br />
+            </div>
+    
+            <button class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+        </form>
+    </div>
+-->
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+
+<section class="login-block">
+    <div class="container">
+	<div class="row">
+		<div class="col-md-4 login-sec">
+		    <h2 class="text-center">Login Now</h2>
+		    <form #loginForm="ngForm" class="form-group" (ngSubmit)="validateUser(loginForm.value)" novalidate>
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon"> <i class="glyphicon glyphicon-user "></i> </span>
+        <input type="text" class="form-control" name="emailId" ngModel required  #userName="ngModel" placeholder="Email Id" style="font-size: small;"><br />
+        </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i> </span>    
+    <input type="password" class="form-control" name="password" ngModel required #password="ngModel" placeholder="Password" style="font-size: small;"><br />
+    </div>
+  </div>
+  
+    <button class="btn btn-primary" [disabled]="!loginForm.valid" style="width: 70px; font-size: small;">Login</button><br /><br />
+    
+    <button class="login-Btn" #loginRef>
+         <img class="social-btn-icon"    alt="Login with Google" src="https://hrcdn.net/fcore/assets/google-colored-20b8216731.svg">  Sign in with Google+
+      </button><br/><br/>
+    <h4>Don't have an account?<a [routerLink]="['/regbuyer']">Register here</a></h4>                
+</form>
+		</div>
+		<div class="col-md-8 banner-sec">    
+    <div >
+      <img class="d-block img-fluid" src="https://hawaii.armymwr.com/application/files/2615/4024/3686/artscraft.jpg" >
+    </div>
+            </div>	  
+		</div>
+	</div>
+</section>
